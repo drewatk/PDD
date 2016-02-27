@@ -1,14 +1,28 @@
-var CommentBox = React.createClass({displayName: 'CommentBox',
+var NewBox = React.createClass({
     render: function() {
         return (
-            React.createElement('div', {className: "commentBox"},
-            "Hello, world! I am a CommentBox. !!!"
+            <div className="newBox">
+                <NewForm />
+            </div>
         );
-    );
     }
 });
 
+var NewForm = React.createClass({
+    render: function() {
+        handleClick : function(event) {
+
+        },
+        return (
+            <div className="col-md-4 col-md-offset-4">
+                <button type="button" className="btn btn-primary btn-lg btn-block">Lunch</button>
+                <button type="button" className="btn btn-primary btn-lg btn-block">Dinner</button>
+            </div>
+        );
+    }
+})
+
 ReactDOM.render(
-    React.createElement(CommentBox, null),
-    document.getElementById('content')
+    React.createElement(NewBox, null),
+    document.getElementById('new-box')
 );
